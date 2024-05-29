@@ -60,7 +60,7 @@ if(NOT TARGET ${APP_NAME_LC}::${CMAKE_FIND_PACKAGE_NAME})
                                                                      IMPORTED_LOCATION "${MICROHTTPD_LIBRARY}"
                                                                      INTERFACE_INCLUDE_DIRECTORIES "${MICROHTTPD_INCLUDE_DIR}"
                                                                      INTERFACE_COMPILE_DEFINITIONS "HAS_WEB_SERVER;HAS_WEB_INTERFACE")
-
+message(WARNING "PC_MICROHTTPD_LINK_LIBRARIES: ")
       # Add link libraries for static lib usage found from pkg-config
       if(PC_MICROHTTPD_LINK_LIBRARIES)
         set_target_properties(${APP_NAME_LC}::${CMAKE_FIND_PACKAGE_NAME} PROPERTIES
